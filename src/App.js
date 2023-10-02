@@ -49,7 +49,7 @@ const App = () => {
               let result = expression.match(/=\s-?\d*\.?\d*$/g);
               let lastNumber = result[0].split(/=/);
               let answer = lastNumber[lastNumber.length - 1].trim();
-              // need another regex who matches the zecimal numbers
+              // need another regex who matches the decimal numbers
               setExpression(answer + " " + symbol + " ");
               setCurrentOperand(symbol);
             }
