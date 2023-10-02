@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+body {
+  background: linear-gradient(to bottom, #333, #00AAAA);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.grid-container {
+  display: grid;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(100px, auto) repeat(5, 100px);
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.grid-item {
+  background-color: rgba(200, 200, 200, .35);
+  border: 1px solid white;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#display {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, .65);
+  border: none;
+  grid-column: span 4;
 }
+
+#answer {
+  font-size: 2.5rem;
+}
+
+#expression {
+  font-size: 1.5rem;
+}
+
+#clear {
+  grid-column: span 2;
+}
+
+#equals {
+  grid-row: span 2;
+}
+
+#zero {
+  grid-column: span 2;
+}
+
